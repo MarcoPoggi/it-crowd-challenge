@@ -26,7 +26,7 @@ const Product = database.define(
       allowNull: false,
     },
   },
-  { timestamps: false }
+  { timestamps: false, modelName: "product" }
 );
 
 module.exports = { Product };
