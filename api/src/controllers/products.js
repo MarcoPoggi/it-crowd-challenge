@@ -1,7 +1,13 @@
 const router = require("express").Router();
+const { getProducts } = require("../database/queries");
 
-router.get("/products", (req, res) => {
-  res.json({ message: "get products" });
+router.get("/products", async (req, res) => {
+  try {
+    const products = await getProducts();
+    res.json({ message: "get products", status: 200, products });
+  } catch (e) {
+    res.status(500).json({ error: e.message, status: 500, products: [] });
+  }
 });
 
 router.post("/products", (req, res) => {
