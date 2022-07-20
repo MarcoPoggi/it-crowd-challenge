@@ -3,7 +3,7 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const app = express();
-const products = require("./src/routes/products");
+const router = require("./src/routes/index");
 const options = require("./src/server/config");
 
 //db & relations
@@ -14,7 +14,7 @@ require("./src/database/relations");
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cors(options));
-app.use("/", products);
+app.use("/", router);
 
 database
   .sync({ force: process.env.DEV === "on" })
