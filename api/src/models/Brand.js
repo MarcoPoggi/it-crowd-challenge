@@ -9,6 +9,9 @@ const Brand = database.define(
       primaryKey: true,
       allowNull: false,
       unique: true,
+      set(value) {
+        this.setDataValue("name", value.toLowerCase());
+      },
     },
     logo_url: {
       type: DataTypes.TEXT,
