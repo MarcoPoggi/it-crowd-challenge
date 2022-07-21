@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const cors = require("cors");
 const app = express();
 const router = require("./src/routes/index");
@@ -12,7 +12,7 @@ require("./src/database/relations");
 
 //middlewares
 app.use(express.json());
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 app.use(cors(options));
 app.use("/", router);
 
