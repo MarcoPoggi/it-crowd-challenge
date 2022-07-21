@@ -6,7 +6,7 @@ const createProduct = async ({ product, brand, model = false }) => {
   try {
     if (!brand) throw new Error("a product cannot be created without a brand");
 
-    let brandToAssociate = await Brand.findByPk(brand.name);
+    let brandToAssociate = await Brand.findByPk(brand.name.toLowerCase());
     if (!brandToAssociate)
       brandToAssociate = await createBrand({ brand, model: true });
 
@@ -32,7 +32,7 @@ const createBrand = async ({
 }) => {
   try {
     const [brandCreateOrFound, created] = await Brand.findOrCreate({
-      where: { name: brand.name },
+      where: { name: brand.name.toLowerCase() },
       defaults: { ...brand },
     });
 
