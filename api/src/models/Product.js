@@ -12,10 +12,16 @@ const Product = database.define(
     name: {
       type: DataTypes.STRING(50),
       allowNull: false,
+      set(value) {
+        this.setDataValue("name", value.toLowerCase());
+      },
     },
     description: {
       type: DataTypes.TEXT,
       allowNull: false,
+      set(value) {
+        this.setDataValue("description", value.toLowerCase());
+      },
     },
     image_url: {
       type: DataTypes.TEXT,
