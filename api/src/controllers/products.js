@@ -5,6 +5,7 @@ const {
   updaters,
   deleters,
 } = require("../database/queries");
+const { verifyAuth } = require("../middlewares/auth");
 
 router.get("/products", async (req, res) => {
   try {
@@ -18,7 +19,7 @@ router.get("/products", async (req, res) => {
   }
 });
 
-router.post("/products", async (req, res) => {
+router.post("/products", verifyAuth, async (req, res) => {
   try {
     const { product, brand } = req.body;
     const createdProduct = await creators.createProduct({ product, brand });
@@ -30,7 +31,7 @@ router.post("/products", async (req, res) => {
   }
 });
 
-router.put("/products", async (req, res) => {
+router.put("/products", verifyAuth, async (req, res) => {
   try {
     const { id, dataProduct, dataBrand } = req.body;
     const updatedProduct = await updaters.updateProductById(id, {
@@ -43,7 +44,7 @@ router.put("/products", async (req, res) => {
   }
 });
 
-router.delete("/products", async (req, res) => {
+router.delete("/products", verifyAuth, async (req, res) => {
   try {
     const { id } = req.body;
     const deleted = await deleters.deleteProductById(id);

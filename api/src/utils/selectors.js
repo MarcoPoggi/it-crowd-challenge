@@ -4,6 +4,7 @@ const { Product, Brand } = require("../database/relations").models;
 const selectProducts = async () => {
   try {
     const products = await Product.findAll({ include: Brand });
+
     return JSON.parse(JSON.stringify(products, null, 2));
   } catch (e) {
     throw new Error(e.message);
