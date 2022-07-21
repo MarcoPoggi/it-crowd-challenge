@@ -9,9 +9,9 @@ const { verifyAuth } = require("../middlewares/auth");
 
 router.get("/products", async (req, res) => {
   try {
-    const { id } = req.query;
+    const { id, page, amount } = req.query;
     const products = !id
-      ? await selectors.selectProducts()
+      ? await selectors.selectProducts(page, amount)
       : await selectors.selectProductById({ id });
     res.json({ message: "get product(s)", status: 200, data: products });
   } catch (e) {

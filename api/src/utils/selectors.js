@@ -1,9 +1,15 @@
 const { Product, Brand } = require("../database/relations").models;
 
 //return all products
-const selectProducts = async () => {
+const selectProducts = async (page = null, amount = false) => {
   try {
-    const products = await Product.findAll({ include: Brand });
+    if (amount === "all") return await Product.count();
+
+    let products = null;
+    (typeof Number(page) === "number") & (page >= 0)
+      ? (products = await Product.findAll({ offset: page * 10, limit: 10 }))
+      : (products = await Product.findAll({ include: Brand }));
+
     return JSON.parse(JSON.stringify(products, null, 2));
   } catch (e) {
     throw new Error(e.message);
