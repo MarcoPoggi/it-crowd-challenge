@@ -24,6 +24,7 @@ const selectBrands = async () => {
 const selectProductById = async ({ id, model = false }) => {
   try {
     const product = await Product.findByPk(id, { include: Brand });
+    if (!product) throw new Error("product not found");
     return model ? product : JSON.parse(JSON.stringify(product, null, 2));
   } catch (e) {
     throw new Error(e.message);
