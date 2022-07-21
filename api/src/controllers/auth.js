@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
-router.post("/", (req, res) => {
-  res.json({ message: "auth route" });
+router.post("/authorization", (req, res) => {
+  res.json({ message: "authorization route" });
 });
 
 module.exports = { auth: router };
