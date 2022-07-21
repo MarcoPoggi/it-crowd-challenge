@@ -27,13 +27,13 @@ export function SearchBar() {
   }, [results, setProducts]);
 
   return (
-    <div>
+    <nav>
       <form onSubmit={onSubmit}>
         <button>
           <img src="" alt="Search" />
         </button>
         <input type="text" onChange={handleSearch} />
       </form>
-    </div>
+    </nav>
   );
 }
