@@ -4,8 +4,7 @@ const { selectProductById } = require("./selectors");
 //create & return a product
 const createProduct = async ({ product, brand, model = false }) => {
   try {
-    if (!brand)
-      throw new Error("a product cannot be created without a brand");
+    if (!brand) throw new Error("a product cannot be created without a brand");
 
     let brandToAssociate = await Brand.findByPk(brand.name);
     if (!brandToAssociate)
@@ -26,15 +25,23 @@ const createProduct = async ({ product, brand, model = false }) => {
   }
 };
 
-const createBrand = async ({ brand, model = false }) => {
+const createBrand = async ({
+  brand,
+  model = false,
+  returnExistent = false,
+}) => {
   try {
-    const [newBrand, created] = await Brand.findOrCreate({
+    const [brandCreateOrFound, created] = await Brand.findOrCreate({
       where: { name: brand.name },
       defaults: { ...brand },
     });
 
-    if (!created) throw new Error("this brand already exists, create another");
-    return model ? newBrand : JSON.parse(JSON.stringify(newBrand, null, 2));
+    if (!created && !returnExistent)
+      throw new Error("this brand already exists, create another");
+
+    return model
+      ? brandCreateOrFound
+      : JSON.parse(JSON.stringify(brandCreateOrFound, null, 2));
   } catch (e) {
     throw new Error(e.message);
   }
