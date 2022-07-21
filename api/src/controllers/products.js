@@ -1,5 +1,10 @@
 const router = require("express").Router();
-const { creators, selectors, updaters } = require("../database/queries");
+const {
+  creators,
+  selectors,
+  updaters,
+  deleters,
+} = require("../database/queries");
 
 router.get("/products", async (req, res) => {
   try {
@@ -32,16 +37,20 @@ router.put("/products", async (req, res) => {
       product: dataProduct,
       brand: dataBrand,
     });
-    res
-      .status(200)
-      .json({ message: "product updated", status: 200, data: updatedProduct });
+    res.json({ message: "product updated", status: 200, data: updatedProduct });
   } catch (e) {
     res.status(400).json({ error: e.message, status: 400, data: null });
   }
 });
 
-router.delete("/products", (req, res) => {
-  res.json({ message: "product deleted" });
+router.delete("/products", async (req, res) => {
+  try {
+    const { id } = req.body;
+    const deleted = await deleters.deleteProductById(id);
+    res.json({ message: "product deleted", status: 200, data: deleted });
+  } catch (e) {
+    res.status(400).json({ error: e.message, status: 400, data: null });
+  }
 });
 
 module.exports = { products: router };
