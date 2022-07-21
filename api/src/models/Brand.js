@@ -17,6 +17,7 @@ const Brand = database.define(
   },
   {
     timestamps: false,
+    modelName: "brand",
   }
 );
 
