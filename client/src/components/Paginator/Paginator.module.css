@@ -1,0 +1,32 @@
+.buttons_pages {
+  margin-top: 12px;
+  border-radius: 6px;
+  width: 80%;
+  min-height: 5vh;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons_pages button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: var(--primary-bg);
+  border-radius: 50%;
+  border: none;
+  width: 48px;
+  height: 48px;
+}
+
+.buttons_pages img {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 2px);
+}
+
+img[alt="Previous"] {
+  transform: rotate(180deg);
+}
