@@ -7,13 +7,20 @@ const {
 } = require("../database/queries");
 const { verifyAuth } = require("../middlewares/auth");
 
-router.get("/products", async (req, res) => {
+router.get("/products", async (_req, res) => {
   try {
-    const { id } = req.query;
-    const products = !id
-      ? await selectors.selectProducts()
-      : await selectors.selectProductById({ id });
-    res.json({ message: "get product(s)", status: 200, data: products });
+    const products = await selectors.selectProducts();
+    res.json({ message: "get products", status: 200, data: products });
+  } catch (e) {
+    res.status(400).json({ error: e.message, status: 400, data: null });
+  }
+});
+
+router.get("/products/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const product = await selectors.selectProductById({ id });
+    res.json({ message: "get product", status: 200, data: product });
   } catch (e) {
     res.status(400).json({ error: e.message, status: 400, data: null });
   }
