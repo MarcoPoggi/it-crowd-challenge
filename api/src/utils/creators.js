@@ -6,9 +6,11 @@ const createProduct = async ({ product, brand, model = false }) => {
   try {
     if (!brand) throw new Error("a product cannot be created without a brand");
 
-    let brandToAssociate = await Brand.findByPk(brand.name.toLowerCase());
-    if (!brandToAssociate)
-      brandToAssociate = await createBrand({ brand, model: true });
+    let brandToAssociate = await createBrand({
+      brand,
+      model: true,
+      returnExistent: true,
+    });
 
     const newProduct = await Product.create({ ...product });
     if (!newProduct) throw new Error("product could not be created");
