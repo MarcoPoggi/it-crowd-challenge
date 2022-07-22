@@ -1,0 +1,38 @@
+.header_container {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  min-height: 14vh;
+  background-color: var(--main-general-bg);
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  min-height: inherit;
+}
+
+.logo {
+  padding: 6px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-general-bg);
+  color: #222;
+}
+
+
+.redirect_image{
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+
+.redirect_container{
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
