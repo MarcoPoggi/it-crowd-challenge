@@ -1,0 +1,158 @@
+[
+  {
+    "product": {
+      "name": "Bicicleta BMX",
+      "description": "Bicicleta para freestyle",
+      "image_url": "https://d3ugyf2ht6aenh.cloudfront.net/stores/052/201/products/bic16013-narnja1-754d48bd2ae2efb2c916269856738902-1024-1024.jpeg",
+      "price": 5600
+    },
+    "brand": {
+      "name": "Andes",
+      "logo_url": "https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png"
+    }
+  },
+  {
+    "product": {
+      "name": "Zapatillas Nike Air Force 1",
+      "description": "Zapatillas urbanas creadas por Nike",
+      "image_url": "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw8abed4db/products/NI_315115-112/NI_315115-112-1.JPG",
+      "price": 15000
+    },
+    "brand": {
+      "name": "Nike",
+      "logo_url": "https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png"
+    }
+  },
+  {
+    "product": {
+      "name": "Bicicleta BMX",
+      "description": "Bicicleta para freestyle",
+      "image_url": "https://mercadoamil.com.ar/wp-content/uploads/2021/02/IMG_0623-scaled.jpg",
+      "price": 2000
+    },
+    "brand": {
+      "name": "Kawasaki",
+      "logo_url": "https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png"
+    }
+  },
+  {
+    "product": {
+      "name": "Bicicleta BMX",
+      "description": "Bicicleta para freestyle",
+      "image_url": "https://mercadoamil.com.ar/wp-content/uploads/2021/02/IMG_0623-scaled.jpg",
+      "price": 2000
+    },
+    "brand": {
+      "name": "Kawasaki",
+      "logo_url": "https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png"
+    }
+  },
+  {
+    "product": {
+      "name": "Bicicleta BMX",
+      "description": "Bicicleta para freestyle",
+      "image_url": "https://d3ugyf2ht6aenh.cloudfront.net/stores/052/201/products/bic16013-narnja1-754d48bd2ae2efb2c916269856738902-1024-1024.jpeg",
+      "price": 5600
+    },
+    "brand": {
+      "name": "Andes",
+      "logo_url": "https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png"
+    }
+  },
+  {
+    "product": {
+      "name": "Zapatillas Nike Air Force 1",
+      "description": "Zapatillas urbanas creadas por Nike",
+      "image_url": "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw8abed4db/products/NI_315115-112/NI_315115-112-1.JPG",
+      "price": 15000
+    },
+    "brand": {
+      "name": "Nike",
+      "logo_url": "https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png"
+    }
+  },
+  {
+    "product": {
+      "name": "Bicicleta BMX",
+      "description": "Bicicleta para freestyle",
+      "image_url": "https://d3ugyf2ht6aenh.cloudfront.net/stores/052/201/products/bic16013-narnja1-754d48bd2ae2efb2c916269856738902-1024-1024.jpeg",
+      "price": 5600
+    },
+    "brand": {
+      "name": "Andes",
+      "logo_url": "https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png"
+    }
+  },
+  {
+    "product": {
+      "name": "Zapatillas Nike Air Force 1",
+      "description": "Zapatillas urbanas creadas por Nike",
+      "image_url": "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw8abed4db/products/NI_315115-112/NI_315115-112-1.JPG",
+      "price": 15000
+    },
+    "brand": {
+      "name": "Nike",
+      "logo_url": "https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png"
+    }
+  },
+  {
+    "product": {
+      "name": "Bicicleta BMX",
+      "description": "Bicicleta para freestyle",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwQhND1LqxKmToadq5R21XRIf61NA6kPxzqg&usqp=CAU",
+      "price": 2000
+    },
+    "brand": {
+      "name": "Kawasaki",
+      "logo_url": "https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png"
+    }
+  },
+  {
+    "product": {
+      "name": "Bicicleta BMX",
+      "description": "Bicicleta para freestyle",
+      "image_url": "https://mercadoamil.com.ar/wp-content/uploads/2021/02/IMG_0623-scaled.jpg",
+      "price": 2000
+    },
+    "brand": {
+      "name": "Kawasaki",
+      "logo_url": "https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png"
+    }
+  },
+  {
+    "product": {
+      "name": "Bicicleta BMX",
+      "description": "Bicicleta para freestyle",
+      "image_url": "https://cdn.aarp.net/content/dam/aarp/entertainment/beauty-and-style/2020/04/1140-hair-products-on-table-esp.jpg",
+      "price": 5600
+    },
+    "brand": {
+      "name": "Andes",
+      "logo_url": "https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png"
+    }
+  },
+  {
+    "product": {
+      "name": "Zapatillas Nike Air Force 1",
+      "description": "Zapatillas urbanas creadas por Nike",
+      "image_url": "https://img.lalr.co/cms/2017/04/12033800/Productos_Vendidos_CocaCola1204.jpg?size=xl&ratio=r40_21",
+      "price": 15000
+    },
+    "brand": {
+      "name": "Nike",
+      "logo_url": "https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png"
+    }
+  },
+  {
+    "product": {
+      "name": "Baby Yoda Simil Pop",
+      "description": "The simil pop of baby yoda!",
+      "image_url": "https://d22fxaf9t8d39k.cloudfront.net/b0e8367b6438bf6d254b12d115c297d18d09557d306a2dba9d3f82f5d989c262101244.jpeg",
+      "price": 8700
+    },
+    "brand": {
+      "name": "Nike",
+      "logo_url": "https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png"
+    }
+  }
+]
