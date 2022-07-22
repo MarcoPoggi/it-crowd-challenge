@@ -1,26 +1,28 @@
-import { useContext } from "react";
-import { ResultsContext } from "../../contexts/ResultsContext";
+import { useProducts } from "../../hooks/useProducts";
+import { usePagination } from "../../hooks/usePagination";
+import { ProductCard } from "../ProductCard/ProductCard";
+import { Paginator } from "../Paginator/Paginator";
+import style from "./Product.module.css";
 
 export function Products() {
-  const { products, loadingProducts } = useContext(ResultsContext);
+  const { loading, error, products } = useProducts();
+  const { from, to, handleNext, handlePrev } = usePagination({
+    limit: 3,
+    total: products.length,
+  });
 
-  if (loadingProducts) return <h1>Loading</h1>;
+  if (loading) return <div className={style.ProductContainer}>Loading</div>;
 
-  if (products?.length === 0) return <h1>No products</h1>;
+  if (error) return <div className={style.ProductContainer}>Error</div>;
 
   return (
-    <main>
-      {Array.isArray(products) ? (
-        products.map((p) => (
-          <div key={p.id}>
-            {p.name} - {p.price} - {p.image_url}
-          </div>
-        ))
-      ) : (
-        <div>
-          <h1>Something has wrong 😥</h1>
-        </div>
-      )}
+    <main className={style.products_page}>
+      <section className={style.products}>
+        {products.slice(from, to).map((p) => (
+          <ProductCard key={p.id} {...p} />
+        ))}
+      </section>
+      <Paginator next={handleNext} prev={handlePrev} />
     </main>
   );
 }
