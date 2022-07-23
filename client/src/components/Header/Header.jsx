@@ -1,22 +1,23 @@
-import { Link } from "wouter";
 import { Logo } from "../Logo/Logo";
 import logo_img_complete from "../../assets/images/logoit-crowd.png";
 import styles from "./Header.module.css";
-import login_icon from "../../assets/images/login-icon.svg";
+import { AuthContext } from "../../contexts/AuthContext";
+import { useContext } from "react";
+import { ButtonSession } from "../Buttons/Session/ButtonSession";
 
 export function Header() {
+  const { authenticated } = useContext(AuthContext);
+
   return (
     <header className={styles.header_container}>
       <div className={styles.content}>
-        <Logo image={logo_img_complete} label="Challenge"/>
+        <Logo image={logo_img_complete} label="Challenge" home={true} />
         <div className={styles.redirect_container}>
-          <Link href="/accounts/login">
-            <img
-              src={login_icon}
-              alt="Login"
-              className={styles.redirect_image}
-            />
-          </Link>
+          {!authenticated ? (
+            <ButtonSession login={true} />
+          ) : (
+            <ButtonSession login={false} />
+          )}
         </div>
       </div>
     </header>
