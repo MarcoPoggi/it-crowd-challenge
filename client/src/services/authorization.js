@@ -10,7 +10,6 @@ export async function getAuthorization({ username, password }) {
       headers: {
         "Content-Type": "application/json",
       },
-      mode: "cors",
     });
     const { token, status } = await res.json();
 
@@ -20,4 +19,19 @@ export async function getAuthorization({ username, password }) {
   } catch (e) {
     throw new Error(e.message);
   }
+}
+
+export async function authorizedToken() {
+  const token = localStorage.getItem("access-token");
+  if (!token) return false;
+
+  const url = `${REACT_APP_API_URL}api/authorization/confirm`;
+  const res = await fetch(url, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  const { authorized } = await res.json();
+  return authorized;
 }
