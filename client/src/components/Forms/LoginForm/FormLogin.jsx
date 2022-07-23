@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { getAuthorization } from "../../../services/authorization";
 import styles from "./FormLogin.module.css";
 
-export function FormLogin() {
+export function FormLogin({ setAuth }) {
   const types = ["password", "username"];
   const [data, setData] = useState({
     username: "",
@@ -25,6 +26,12 @@ export function FormLogin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    getAuthorization({ ...data })
+      .then((token) => {
+        localStorage.setItem("access-token", token);
+        setAuth(true);
+      })
+      .catch(() => setAuth(false));
   };
 
   return (
