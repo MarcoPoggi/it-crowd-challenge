@@ -9,7 +9,7 @@
 }
 
 .logo_in_login {
-  padding: 6px;
+  padding: 30px 10px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -19,5 +19,5 @@
 }
 
 .logo_in_login>img {
-  height: 64px;
+  height: 48px;
 }
