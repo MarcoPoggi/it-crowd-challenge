@@ -6,6 +6,7 @@
   justify-content: center;
   background-color: var(--main-general-bg);
   color: #222;
+  text-decoration: none;
 }
 
 .logo_in_login {
@@ -16,6 +17,7 @@
   justify-content: center;
   background: none;
   color: #222;
+  text-decoration: none;
 }
 
 .logo_in_login>img {
