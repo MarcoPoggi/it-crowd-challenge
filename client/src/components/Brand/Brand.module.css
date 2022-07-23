@@ -1,0 +1,31 @@
+.brand_container {
+  background-color: rgb(29, 29, 29);
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+  padding: 20px;
+}
+
+
+.brand_container span {
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.brand_img_container{
+  background-color: #FFF;
+  margin-right: 10px;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand_container img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}

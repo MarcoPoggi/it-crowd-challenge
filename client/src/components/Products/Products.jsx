@@ -18,9 +18,11 @@ export function Products() {
   return (
     <main className={style.products_page}>
       <section className={style.products}>
-        {products.slice(from, to).map((p) => (
-          <ProductCard key={p.id} {...p} />
-        ))}
+        {Array.isArray(products) ? (
+          products.slice(from, to).map((p) => <ProductCard key={p.id} {...p} />)
+        ) : (
+          <div className={style.ProductContainer}>Error</div>
+        )}
       </section>
       <Paginator next={handleNext} prev={handlePrev} />
     </main>

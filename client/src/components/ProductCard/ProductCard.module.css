@@ -2,7 +2,7 @@
   cursor: pointer;
   position: static;
   z-index: 10;
-  padding: 0px;
+  padding: 10px;
   border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.425);
   text-transform: capitalize;
@@ -13,15 +13,18 @@
   justify-content: space-between;
 }
 
-.card_container img {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  width: 100%;
-  height: 250px;
-  filter: drop-shadow(0 0 5px rgb(109, 109, 109));
+.card_image{
+  background-color: #FFF;
 }
 
-.card_info{
+.card_image > img{
+  width: 100%;
+  height: 250px;
+  object-fit: scale-down;
+  border-radius: 6px;
+}
+
+.card_info {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -31,7 +34,15 @@
   text-shadow: 0 0 1px #000;
 }
 
-.card_container span{
+.card_info h3 {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: pre;
+  height: 50px;
+  overflow: hidden;
+}
+
+.card_container span {
   color: #FFF;
   text-shadow: 0 0 4px rgb(6, 160, 6);
   margin-right: 5px;

@@ -11,7 +11,7 @@ export function Header() {
           <img src={Logo} alt="Logo" /> <h2>CHALLENGE</h2>
         </div>
         <div className={styles.redirect_container}>
-          <Link href="/login">
+          <Link href="/accounts/login">
             <img
               src={login_icon}
               alt="Login"
