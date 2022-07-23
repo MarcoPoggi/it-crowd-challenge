@@ -1,0 +1,23 @@
+.logo {
+  padding: 6px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-general-bg);
+  color: #222;
+}
+
+.logo_in_login {
+  padding: 6px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  color: #222;
+}
+
+.logo_in_login > img{
+  height: 64px;
+}
