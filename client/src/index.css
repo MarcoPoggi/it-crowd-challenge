@@ -25,3 +25,7 @@ body {
   color: var(--light-text);
   font-family: 'Monda', sans-serif;
 }
+
+button{
+  font-family: 'Monda', sans-serif;
+}
