@@ -10,10 +10,11 @@ async function verifyAuth(req, res, next) {
 
     jwt.verify(token, SECRET, (err, _decoded) => {
       if (err) throw new Error("invalid token");
+      req.body = { ...req.body, authorized: true };
       next();
     });
   } catch (e) {
-    res.status(400).json({ error: e.message, status: 400, token: null });
+    res.status(400).json({ error: e.message, status: 400, authorized: false });
   }
 }
 
