@@ -18,7 +18,8 @@ Database: ElephantSQL(private)
 **Brief description:**
 The **backend**(developed with express) connects to the postgre **database**, then through a `json file`, which contains false data from different products, the database is initialized. Through the defined endpoints you can **create**, **update**, **read** and **delete** the products. In addition, certain actions are restricted (**authentication** will be required).
 
-**Endpoints:**
+**Endpoints:**  
+
 🟩 **`GET`**
 
  - `/products`: returns as response an array with all the products in the database
