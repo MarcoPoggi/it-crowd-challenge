@@ -140,3 +140,57 @@ The **client** consumes from the **backend** the products stored in the database
 
 
 
+## How to test the app locally.
+You must **first** have [postgreSQL](https://www.postgresql.org/download/) installed on your computer.  
+Once installed we must create a database, you can call it as you like
+
+**Make sure** you have [NodeJS](https://nodejs.org/en/) and NPM installed.  
+
+**You must also** install [GIT](https://git-scm.com/downloads), if you don't have it.
+
+Then through bash you will do the following**strong text**:
+
+    git clone https://github.com/MarcoPoggi/it-crowd-challenge.git
+Once the repository is **cloned**:
+
+    cd it-crowd-challenge/
+in the `/api` folder **we must create** a `.env` file that contains the following:
+
+    DB_NAME= // the name of the database we created
+    DB_USER=//postgres username (default is postgres)
+    DB_HOST=localhost
+    DB_PASS=//the password of your postgres user
+    ADMIN= //the admin name you want to use to access the panel from the client
+    ADMIN_PASS=//admin password
+    SECRET=//a secret word / key(anything)
+    PORT=3001
+    DEV=on //mode developer "ON"
+
+**Alternative** if we don't want/can install postgres: create the `.env` file as follows:
+
+    DB_NAME=wrmstjqg
+    DB_USER=wrmstjqg
+    DB_HOST=kesavan.db.elephantsql.com
+    DB_PASS=9f7qOV0OIUpK_CIfyLuU5hyrTNbn2SiZ
+    ADMIN= //admin name
+    ADMIN_PASS=//admin password
+    SECRET=//secret key
+    PORT=3001
+    DEV=on //mode developer on
+   
+To **run / start** the server, we stop in the `/api` folder:
+   
+
+       npm install -> install dependencies
+       npm start -> open server
+
+To **run / start** the client, we stop at the `/client` folder: First of all the client needs a `.env.local` file like this:
+
+      REACT_APP_API_URL=http://localhost:3001/
+
+After configuring our `.env.local,` we run the following:
+
+       npm install
+       npm start
+
+
