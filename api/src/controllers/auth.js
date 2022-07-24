@@ -1,3 +1,4 @@
+const { verifyAuth } = require("../middlewares/auth");
 const router = require("express").Router();
 const jwt = require("jsonwebtoken");
 const { ADMIN, ADMIN_PASS, SECRET } = process.env;
@@ -19,6 +20,15 @@ router.post("/authorization", async (req, res) => {
     res.json({ message: "token sign", status: 200, token });
   } catch (e) {
     res.status(400).json({ error: e.message, status: 400, token: null });
+  }
+});
+
+router.post("/authorization/confirm", verifyAuth, async (req, res) => {
+  try {
+    if (!req.body.authorized) throw new Error("invalid token");
+    res.json({ message: "valid token", status: 200, authorized: true });
+  } catch (e) {
+    res.status(500).json({ error: e.message, status: 500 });
   }
 });
 

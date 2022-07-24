@@ -13,26 +13,10 @@
   min-height: inherit;
 }
 
-.logo {
-  padding: 6px;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--main-general-bg);
-  color: #222;
-}
-
-
-.redirect_image{
-  cursor: pointer;
-  width: 48px;
-  height: 48px;
-}
-
-.redirect_container{
+.redirect_container {
   padding: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 40px;
 }

@@ -3,8 +3,10 @@
 :root {
   --main-general-bg: #fdfdfd;
   --main-secondary-bg: #1C1C28;
+  --main-secondary-bg-op: #1c1c28e8;
   --main-secondary-bg-smooth: #39394b;
   --primary-bg: #51A144;
+  --primary-bg-op: #50a144d3;
   --dark-text: #2B2A2A;
   --light-text: #FFFFFF;
   --dim-text: #5E5E5E;
@@ -21,5 +23,9 @@ body {
   width: 100%;
   background-color: var(--main-general-bg);
   color: var(--light-text);
+  font-family: 'Monda', sans-serif;
+}
+
+button{
   font-family: 'Monda', sans-serif;
 }
