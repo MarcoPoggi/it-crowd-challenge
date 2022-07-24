@@ -19,6 +19,6 @@ export function Login() {
       <FormLogin setAuth={setAuthenticated} />
     </div>
   ) : (
-    <Redirect to="/" />
+    <Redirect to="/admin-panel" />
   );
 }
