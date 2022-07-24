@@ -1,8 +1,10 @@
 # IT CROWD Challenge
 
 ## Deployment ☁️
-Backend: [Heroku](https://itcrowd-ch.herokuapp.com/api/products)
-Frontend: [Vercel](https://it-crowd-challenge-marcopoggi.vercel.app/products)
+Backend: [Heroku](https://itcrowd-ch.herokuapp.com/api/products)  
+
+Frontend: [Vercel](https://it-crowd-challenge-marcopoggi.vercel.app/products)  
+
 Database: ElephantSQL(private)
 
 ## Backend 🥷🏻
