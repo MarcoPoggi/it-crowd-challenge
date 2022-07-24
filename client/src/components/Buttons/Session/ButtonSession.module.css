@@ -1,0 +1,27 @@
+.redirect_image_login {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+
+.redirect_image_logout {
+  transform: rotate(180deg);
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+
+.button_container{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--dark-text);
+  background: none;
+  border: none;
+}
+
+.button_container span{
+  font-size: 20px;
+}

@@ -1,15 +1,15 @@
 const ALLOWED_ORIGINS =
   process.env.DEV === "on"
     ? [
-        "it-crowd-challenge-one.vercel.app",
+        "https://it-crowd-challenge-one.vercel.app",
         "https://it-crowd-challenge-marcopoggi.vercel.app",
-        /https:\/\/it-crowd-challenge-.*-.vercel.app/,
+        /https:\/\/it-crowd-challenge-.*-marcopoggi.vercel.app/,
         /http:\/\/localhost:([0-9]{4})/,
       ]
     : [
-        "it-crowd-challenge-one.vercel.app",
+        "https://it-crowd-challenge-one.vercel.app",
         "https://it-crowd-challenge-marcopoggi.vercel.app",
-        /https:\/\/it-crowd-challenge-.*-.vercel.app/,
+        /https:\/\/it-crowd-challenge-.*-marcopoggi.vercel.app/,
       ];
 
 //access-control-allow:

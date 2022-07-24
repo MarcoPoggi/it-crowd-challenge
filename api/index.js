@@ -5,6 +5,8 @@ const cors = require("cors");
 const app = express();
 const router = require("./src/routes/index");
 const options = require("./src/server/config");
+//mock data
+const { mockDatabase } = require("./src/database/mockData");
 
 //db & relations
 const { database } = require("./src/database/database");
@@ -18,9 +20,10 @@ app.use("/", router);
 
 database
   .sync({ force: process.env.DEV === "on" })
-  .then(() =>
+  .then(async () => {
+   await mockDatabase();
     app.listen(process.env.PORT, () =>
       console.log(`🟢 Server on port ${process.env.PORT}`)
-    )
-  )
+    );
+  })
   .catch(() => console.log("🔴 Server error: failed to sync database"));

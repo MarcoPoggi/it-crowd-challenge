@@ -1,0 +1,22 @@
+.header_container {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  min-height: 14vh;
+  background-color: var(--main-general-bg);
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  min-height: inherit;
+}
+
+.redirect_container {
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}

@@ -1,0 +1,23 @@
+.products_page {
+  padding: 16px;
+  background-color: var(--main-secondary-bg);
+  width: 100%;
+  top: 10vh;
+  min-height: 86vh;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.products {
+  width: 100%;
+  background-color: var(--main-secondary-bg-smooth);
+  border-radius: 6px;
+  padding: 12px;
+  display: grid;
+  gap: 20px;
+  min-height: calc(76vh - 36px);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  align-content: center;
+}

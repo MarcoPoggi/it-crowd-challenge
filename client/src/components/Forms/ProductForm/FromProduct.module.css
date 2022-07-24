@@ -1,0 +1,135 @@
+.form_container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  padding: 16px;
+  align-items: center;
+  min-height: 90vh;
+  width: 100%;
+  background-color: var(--primary-bg-op);
+}
+
+.form_container *:focus {
+  outline: none;
+}
+
+.form_clear {
+  padding: 15px 0;
+  display: flex;
+  width: 80%;
+}
+
+.form_clear>button {
+  border: none;
+  padding: 6px;
+  font-weight: bold;
+}
+
+
+.form_product,
+.form_product_product,
+.form_product_brand {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 60vh;
+  gap: 10px;
+}
+
+/* form product part */
+.form_product_product input,
+.form_product_product textarea,
+.form_product_brand input {
+  border: none;
+  background-color: var(--main-secondary-bg-op);
+  padding: 9px;
+  width: 80%;
+  border-radius: 6px;
+  color: var(--light-text);
+  font-size: 16px;
+}
+
+.form_product_product textarea {
+  min-width: 80%;
+  max-width: 80%;
+  min-height: 100px;
+  max-height: 100px;
+}
+
+/* input files */
+.form_product_file {
+  cursor: pointer;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(43, 43, 43, 0.507);
+  border-radius: 6px;
+  min-height: 200px;
+  width: 80%;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.form_product_file>img {
+  border-radius: 9px;
+  width: 200px;
+  height: auto;
+}
+
+.form_product_file>input {
+  display: none;
+}
+
+/* buttons(add,edit,delete) */
+.form_buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.form_buttons>button {
+  border: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.form_button_create {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+
+.form_button_edit {
+  background-color: rgba(0, 0, 255, 0.5);
+}
+
+.form_button_delete {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.form_buttons>button:disabled {
+  cursor: not-allowed;
+  background-color: rgba(245, 245, 245, 0.767);
+}
+
+@media only screen and (min-width:780px) {
+
+  .form_product,
+  .form_product_product,
+  .form_product_brand,
+  .form_buttons {
+    width: 65%;
+  }
+
+  .form_clear {
+    width: 34%;
+  }
+}

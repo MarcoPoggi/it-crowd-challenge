@@ -10,12 +10,18 @@ const Product = database.define(
       defaultValue: DataTypes.UUIDV4,
     },
     name: {
-      type: DataTypes.STRING(50),
+      type: DataTypes.STRING(150),
       allowNull: false,
+      set(value) {
+        this.setDataValue("name", value.toLowerCase());
+      },
     },
     description: {
       type: DataTypes.TEXT,
       allowNull: false,
+      set(value) {
+        this.setDataValue("description", value.toLowerCase());
+      },
     },
     image_url: {
       type: DataTypes.TEXT,

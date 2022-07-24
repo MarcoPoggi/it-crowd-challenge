@@ -1,0 +1,20 @@
+.avatar_container{
+  margin-top: 5vh;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* avatar img */
+.avatar_container > img{
+  width: auto;
+  height: 128px;
+  border-radius: 50%;
+}
+/* avatar name */
+.avatar_container > h3{
+  font-size: 2em;
+}
