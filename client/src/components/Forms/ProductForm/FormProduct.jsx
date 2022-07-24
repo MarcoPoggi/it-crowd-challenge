@@ -56,7 +56,7 @@ export function FormProduct() {
         const url_image = URL.createObjectURL(file);
         if (e.target.id === "file_product") {
           productImg.current.src = url_image;
-          setProduct({ ...product, image_url: file });
+          setProduct({ ...product, image_url: url_image });
         } else {
           brandImg.current.src = url_image;
           setProduct({
@@ -73,7 +73,6 @@ export function FormProduct() {
     let allowed = ["p_name", "p_description", "p_price", "b_name"];
     if (allowed.includes(id)) {
       if (id === "b_name") {
-        console.log(id, "--->", value);
         let brandCopy = { ...product.brand };
         brandCopy.name = value;
         return setProduct({ ...product, brand: { ...brandCopy } });
