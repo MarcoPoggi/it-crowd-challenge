@@ -194,3 +194,7 @@ After configuring our `.env.local,` we run the following:
        npm start
 
 
+
+## Extra  
+
+With a little more time ⏲, the functionality of the administrator panel, spinner creator for uploads, optimal control of forms, adding the functionality of uploading images to the back (using [multer](https://www.npmjs.com/package/multer) for example) would have been completed.
