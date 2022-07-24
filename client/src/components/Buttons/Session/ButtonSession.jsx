@@ -16,21 +16,21 @@ export function ButtonSession({ login }) {
 
   return login ? (
     <Link href="/accounts/login" className={styles.button_container}>
-      <span>Login</span>
       <img
         src={login_icon}
         alt="Login"
         className={styles.redirect_image_login}
       />
+      <span>Login</span>
     </Link>
   ) : (
     <button onClick={handleLogout} className={styles.button_container}>
-      <span>Logout</span>
       <img
         src={logout_icon}
         alt="Logout"
         className={styles.redirect_image_logout}
       />
+      <span>Logout</span>
     </button>
   );
 }

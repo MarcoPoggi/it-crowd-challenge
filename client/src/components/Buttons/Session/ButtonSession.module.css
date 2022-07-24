@@ -13,8 +13,9 @@
 
 .button_container{
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   text-decoration: none;
   color: var(--dark-text);
   background: none;

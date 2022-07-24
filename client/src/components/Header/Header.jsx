@@ -4,6 +4,7 @@ import styles from "./Header.module.css";
 import { AuthContext } from "../../contexts/AuthContext";
 import { useContext } from "react";
 import { ButtonSession } from "../Buttons/Session/ButtonSession";
+import { ButtonPanel } from "../Buttons/Panel/ButtonPanel";
 
 export function Header() {
   const { authenticated } = useContext(AuthContext);
@@ -16,7 +17,10 @@ export function Header() {
           {!authenticated ? (
             <ButtonSession login={true} />
           ) : (
-            <ButtonSession login={false} />
+            <>
+              <ButtonPanel />
+              <ButtonSession login={false} />
+            </>
           )}
         </div>
       </div>
