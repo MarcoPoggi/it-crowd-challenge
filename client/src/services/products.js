@@ -16,9 +16,9 @@ export async function getProducts(id = null) {
 
     const response = Array.isArray(info)
       ? info.map((p) => {
-          return { ...p, price: p.price.toLocaleString("en-US") };
+          return { ...p, price: p.price.toLocaleString("es-ES") };
         })
-      : { ...info, price: info.price.toLocaleString("en-US") };
+      : { ...info, price: info.price.toLocaleString("es-ES") };
 
     return response;
   } catch (e) {
